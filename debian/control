@@ -8,7 +8,8 @@ Build-Depends: debhelper (>= 9),
                libexif-dev,
                libgstreamer-plugins-bad1.0-dev,
                libhybris-dev,
-               nemo-gstreamer1.0-interfaces-dev (>= 0.20200421.0)
+               nemo-gstreamer1.0-interfaces-dev (>= 0.20200421.0),
+               git
 Standards-Version: 4.2.1
 Section: libs
 Homepage: https://github.com/sailfishos/gst-droid/
