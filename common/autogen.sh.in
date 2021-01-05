@@ -1,12 +1,3 @@
-#!/bin/sh
-#
-# gst-droid autogen.sh
-#
-# Run this to generate all the initial makefiles, etc.
-#
-# This file has been generated from common/autogen.sh.in via common/update-autogen
-
-
 test -n "$srcdir" || srcdir=`dirname "$0"`
 test -n "$srcdir" || srcdir=.
 
@@ -14,8 +5,16 @@ olddir=`pwd`
 cd "$srcdir"
 
 DIE=0
-package=gst-droid
-srcfile=gst-droid.doap
+package=@PACKAGE@
+srcfile=@SRCFILE@
+
+# Make sure we have common
+if test ! -f common/gst-autogen.sh;
+then
+  echo "+ Setting up common submodule"
+  git submodule init
+fi
+git submodule update
 
 # source helper functions
 if test ! -f common/gst-autogen.sh;
@@ -36,7 +35,7 @@ fi
 # GNU gettext automake support doesn't get along with git.
 # https://bugzilla.gnome.org/show_bug.cgi?id=661128
 if test -d po ; then
-  touch -t 200001010000 po/gst-droid-1.0.pot
+  touch -t 200001010000 po/@PACKAGE@-@API_VERSION@.pot
 fi
 
 CONFIGURE_DEF_OPT='--enable-maintainer-mode --enable-gtk-doc'
