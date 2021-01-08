@@ -159,11 +159,7 @@ struct DataEntry SceneValues[] = {
   {GST_PHOTOGRAPHY_SCENE_MODE_FIREWORKS, "fireworks"},
   {GST_PHOTOGRAPHY_SCENE_MODE_PARTY, "party"},
   {GST_PHOTOGRAPHY_SCENE_MODE_CANDLELIGHT, "candlelight"},
-  {GST_PHOTOGRAPHY_SCENE_MODE_BARCODE, "barcode"},
-  {GST_PHOTOGRAPHY_SCENE_MODE_BACKLIGHT, "backlight"},
-  {GST_PHOTOGRAPHY_SCENE_MODE_FLOWERS, "flowers"},
-  {GST_PHOTOGRAPHY_SCENE_MODE_AR, "AR"},
-  {GST_PHOTOGRAPHY_SCENE_MODE_HDR, "hdr"}
+  {GST_PHOTOGRAPHY_SCENE_MODE_BARCODE, "barcode"}
 };
 
 struct DataEntry ColourToneValues[] = {
@@ -179,10 +175,7 @@ struct DataEntry ColourToneValues[] = {
   {GST_PHOTOGRAPHY_COLOR_TONE_MODE_POSTERIZE, "posterize"},
   {GST_PHOTOGRAPHY_COLOR_TONE_MODE_WHITEBOARD, "whiteboard"},
   {GST_PHOTOGRAPHY_COLOR_TONE_MODE_BLACKBOARD, "blackboard"},
-  {GST_PHOTOGRAPHY_COLOR_TONE_MODE_AQUA, "aqua"},
-  {GST_PHOTOGRAPHY_COLOR_TONE_MODE_EMBOSS, "emboss"},
-  {GST_PHOTOGRAPHY_COLOR_TONE_MODE_SKETCH, "sketch"},
-  {GST_PHOTOGRAPHY_COLOR_TONE_MODE_NEON, "neon"}
+  {GST_PHOTOGRAPHY_COLOR_TONE_MODE_AQUA, "aqua"}
 };
 
 struct DataEntry FlickerValues[] = {
@@ -394,24 +387,24 @@ gst_droidcamsrc_photography_register (G_GNUC_UNUSED gpointer g_iface,
   iface->get_config = gst_droidcamsrc_photography_get_config;
   iface->get_noise_reduction = gst_droidcamsrc_photography_get_noise_reduction;
   iface->set_noise_reduction = gst_droidcamsrc_photography_set_noise_reduction;
-  iface->get_exposure_mode = gst_droidcamsrc_photography_get_exposure_mode;
-  iface->set_exposure_mode = gst_droidcamsrc_photography_set_exposure_mode;
-  iface->get_analog_gain = gst_droidcamsrc_photography_get_analog_gain;
-  iface->set_analog_gain = gst_droidcamsrc_photography_set_analog_gain;
-  iface->get_lens_focus = gst_droidcamsrc_photography_get_lens_focus;
-  iface->set_lens_focus = gst_droidcamsrc_photography_set_lens_focus;
-  iface->get_color_temperature =
-      gst_droidcamsrc_photography_get_color_temperature;
-  iface->set_color_temperature =
-      gst_droidcamsrc_photography_set_color_temperature;
-  iface->get_min_exposure_time =
-      gst_droidcamsrc_photography_get_min_exposure_time;
-  iface->set_min_exposure_time =
-      gst_droidcamsrc_photography_set_min_exposure_time;
-  iface->get_max_exposure_time =
-      gst_droidcamsrc_photography_get_max_exposure_time;
-  iface->set_max_exposure_time =
-      gst_droidcamsrc_photography_set_max_exposure_time;
+//  iface->get_exposure_mode = gst_droidcamsrc_photography_get_exposure_mode;
+//  iface->set_exposure_mode = gst_droidcamsrc_photography_set_exposure_mode;
+//  iface->get_analog_gain = gst_droidcamsrc_photography_get_analog_gain;
+//  iface->set_analog_gain = gst_droidcamsrc_photography_set_analog_gain;
+//  iface->get_lens_focus = gst_droidcamsrc_photography_get_lens_focus;
+//  iface->set_lens_focus = gst_droidcamsrc_photography_set_lens_focus;
+//  iface->get_color_temperature =
+//      gst_droidcamsrc_photography_get_color_temperature;
+//  iface->set_color_temperature =
+//      gst_droidcamsrc_photography_set_color_temperature;
+//  iface->get_min_exposure_time =
+//      gst_droidcamsrc_photography_get_min_exposure_time;
+//  iface->set_min_exposure_time =
+//      gst_droidcamsrc_photography_set_min_exposure_time;
+//  iface->get_max_exposure_time =
+//      gst_droidcamsrc_photography_get_max_exposure_time;
+//  iface->set_max_exposure_time =
+//      gst_droidcamsrc_photography_set_max_exposure_time;
 }
 
 void
